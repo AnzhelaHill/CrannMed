@@ -1,0 +1,168 @@
+:root {
+	--main-color: #00305c;
+	--secondary-color: #19a7a7;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	font-family: "Public Sans", sans-serif;
+	background-color: #d9d4d4;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.burger-btn {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	padding: 24px;
+	background-color: #0b6f6f;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+}
+.burger-btn__box {
+	position: relative;
+	width: 40px;
+	height: 30px;
+}
+.burger-btn__bars,
+.burger-btn__bars::after,
+.burger-btn__bars::before {
+	position: absolute;
+	right: 0;
+	height: 3px;
+	content: "";
+	background-color: #fff;
+	transition: width 0.3s;
+}
+.burger-btn__bars {
+	width: 100%;
+}
+.burger-btn__bars::after {
+	top: 13px;
+	width: 100%;
+}
+.burger-btn__bars::before {
+	top: 27px;
+	width: 100%;
+	transition-delay: 0.1s;
+}
+
+.header {
+	height: 12vh;
+	width: 100%;
+	background-color: #fff;
+}
+
+.nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 12vh;
+}
+
+.nav-logo {
+	position: relative;
+	top: 15px;
+	left: 15px;
+	padding: 15px;
+	aspect-ratio: auto 157.394 / 62.096;
+	width: 157px;
+}
+
+.navbar a {
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.navbar-btns {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	padding: 0 35px;
+	font-weight: 700;
+	min-width: 150px;
+	text-align: center;
+	color: #00305c;
+}
+
+.navbar {
+	display: none;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+}
+
+.nav-item {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px;
+	list-style-type: none;
+}
+
+.nav-link {
+	display: flex;
+	flex-direction: row;
+	text-decoration: none;
+	color: var(--main-color);
+}
+
+.nav-link img {
+	padding: 5px;
+}
+
+.dropdown-menu {
+	display: none;
+}
+
+.btn-contact {
+	padding: 16px;
+	border-radius: 56px;
+	border: 1px solid #20c7c7;
+	color: var(--main-color);
+}
+
+/* Media */
+
+@media (min-width: 576px) {
+	.navbar {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar {
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+	.burger-btn {
+		display: none;
+	}
+
+	.navbar {
+		display: block;
+	}
+}
