@@ -21,9 +21,13 @@ body {
 
 .burger-btn {
 	position: fixed;
-	top: 10px;
-	right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 0px;
 	padding: 24px;
+	height: 12vh;
+	width: 12vh;
 	background-color: #0b6f6f;
 	border: 1px solid transparent;
 	cursor: pointer;
@@ -57,27 +61,47 @@ body {
 	transition-delay: 0.1s;
 }
 
-.header {
-	height: 12vh;
+.container {
+	margin: 0 auto;
+	max-width: 1300px;
 	width: 100%;
+}
+
+.header {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 12vh;   /*TODO: try to change height dynamicly*/
+	width: 100%;
+	font-size: 16px;
 	background-color: #fff;
 }
 
+
 .nav {
-	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 12vh;
+	width: 100%;
 }
 
 .nav-logo {
 	position: relative;
-	top: 15px;
-	left: 15px;
-	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 15px;
 	aspect-ratio: auto 157.394 / 62.096;
 	width: 157px;
+}
+
+.navbar {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .navbar a {
@@ -121,19 +145,50 @@ body {
 	list-style-type: none;
 }
 
+
 .nav-link {
 	display: flex;
 	flex-direction: row;
 	text-decoration: none;
 	color: var(--main-color);
+	transition: color .3s;
 }
 
+.nav-link:hover {
+	color: var(--secondary-color);
+}
 .nav-link img {
 	padding: 5px;
 }
 
 .dropdown-menu {
 	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 9vh;
+	left: 5px;
+	min-width: 350px;
+	padding: 20px;
+	background-color: #f4f4f4;
+	box-shadow: 0px 0px 20px 0.1px rgb(164, 162, 162);;
+	z-index: 100;
+}
+
+.dropdown-menu-toggle {
+	display: flex;
+}
+
+.menu-item {
+	list-style-type: none;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	padding: 10px;
+}
+
+.menu-item a {
+	color: var(--main-color);
+	text-align: start;
 }
 
 .btn-contact {
@@ -141,11 +196,21 @@ body {
 	border-radius: 56px;
 	border: 1px solid #20c7c7;
 	color: var(--main-color);
+	transition: background-color .3s, color .3s;
+}
+
+.btn-contact:hover {
+	background-color: #0b6f6f;
+	color: #fff;
 }
 
 /* Media */
 
 @media (min-width: 576px) {
+	.header {
+		height: 12vh;
+	}
+
 	.navbar {
 		display: none;
 	}
@@ -162,7 +227,18 @@ body {
 		display: none;
 	}
 
+	.header {
+		height: 12vh;
+		font-size: 14px;
+	}
+
 	.navbar {
 		display: block;
+	}
+}
+
+@media (min-width: 1200px) {
+	.header {
+		font-size: 16px;
 	}
 }
