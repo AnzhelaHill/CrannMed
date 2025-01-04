@@ -63,6 +63,9 @@ body {
 
 .navbar-btns-burger {
 	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -70,20 +73,44 @@ body {
 	min-width: 100vw;
 	min-height: 100vh;
 	z-index: 1000;
-	padding: 10%;
 }
 
 .nav-main-burger {
+	display: flex;
+	justify-content: start;
+	align-items: center;
 	margin-bottom: 10%;
-	font-size: 20px;
+	font-size: 25px;
+	margin-top: 80px;
 }
 
-.nav-item-burger, .dropdown-menu-burger {
+.nav-item-burger {
 	list-style-type: none;
+	background-color: #d9d4d4;
+	padding: 10%;
+	margin-bottom: 3px;
+	min-width: 100vw;
+}
+
+.nav-link-burger, .btn-contact-burger {
+	text-decoration: none;
 }
 
 .dropdown-menu-burger {
 	display: none;
+	list-style-type: none;
+}
+
+.nav-xmark {
+	position: absolute;
+	right: 30px;
+	top: 0px;
+	color: var(--main-color);
+	font-size: 60px;
+	
+}
+
+.nav-xmark i {
 }
 
 .container {
