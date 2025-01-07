@@ -1,6 +1,8 @@
 :root {
 	--main-color: #00305c;
 	--secondary-color: #19a7a7;
+	--thirdth-color: #0b6f6f;
+	--background-color: #f4f4f4;
 }
 
 *,
@@ -14,7 +16,7 @@
 body {
 	height: 100vh;
 	font-family: "Public Sans", sans-serif;
-	background-color: #d9d4d4;
+	background-color: var(--background-color);
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -28,7 +30,7 @@ body {
 	padding: 24px;
 	height: 12vh;
 	width: 12vh;
-	background-color: #0b6f6f;
+	background-color: var(--thirdth-color);
 	border: 1px solid transparent;
 	cursor: pointer;
 	z-index: 1000;
@@ -64,56 +66,122 @@ body {
 .navbar-btns-burger {
 	display: none;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: start;
 	position: absolute;
 	top: 0;
 	left: 0;
 	background-color: #fff;
+	font-weight: bold;
 	min-width: 100vw;
 	min-height: 100vh;
 	z-index: 1000;
 }
 
-.nav-main-burger {
+.nav-xmark {
 	display: flex;
-	justify-content: start;
+	justify-content: end;
 	align-items: center;
-	margin-bottom: 10%;
-	font-size: 25px;
-	margin-top: 80px;
+	color: var(--background-color);
+	background-color: var(--main-color);
+	width: 100vw;
+	margin-bottom: 5px;
+}
+
+.nav-xmark i {
+	padding: 20px;
+	font-size: 45px;
+}
+
+.nav-xmark i:hover {
+	color: #c2c2c2;
 }
 
 .nav-item-burger {
 	list-style-type: none;
-	background-color: #d9d4d4;
-	padding: 10%;
+	background-color: var(--background-color);
 	margin-bottom: 3px;
-	min-width: 100vw;
+}
+
+.nav-link-burger {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30% 0 5%;
+}
+
+.nav-link-burger:hover {
+	color: var(--secondary-color);
+}
+
+.nav-link-burger img {
+	padding: 20px;
 }
 
 .nav-link-burger, .btn-contact-burger {
 	text-decoration: none;
+	color: var(--main-color);
+}
+
+.nav-link-burger-toggle {
+	color: var(--secondary-color);
 }
 
 .dropdown-menu-burger {
 	display: none;
-	list-style-type: none;
+	width: 100vw;
+	background-color: #fff;
+	list-style-type: none;	
 }
 
-.nav-xmark {
-	position: absolute;
-	right: 30px;
-	top: 0px;
+.dropdown-menu-burger-toggle {
+	display: block;
+}
+
+.menu-item-burger {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	padding: 0% 30% 0% 5%;
+}
+
+.menu-item-burger a {
+	text-decoration: none;
+	min-width: 100vw;
+	min-height: 100%;
 	color: var(--main-color);
-	font-size: 60px;
-	
+	padding: 2% 0;
 }
 
-.nav-xmark i {
+.menu-item-burger:hover, .menu-item-burger a:hover {
+	background-color: var(--main-color);
+	color: var(--background-color);
 }
 
-.container {
+.contact-burger {
+	display: flex;
+	justify-content: start;
+	align-items: start;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--background-color);
+}
+
+.btn-contact-burger {
+	text-transform: capitalize;
+	background-color: #fff;
+	padding: 1rem 2rem;
+	margin: 1rem;
+	border: 2px solid var(--secondary-color);
+	border-radius: 56px;
+	outline: 0;
+	transition: color .3s, background-color .3s;
+}
+
+.btn-contact-burger:hover {
+	background-color: var(--thirdth-color);
+	color: var(--background-color);
+}
+
+.container-wrapper {
 	margin: 0 auto;
 	max-width: 1300px;
 	width: 100%;
@@ -126,7 +194,7 @@ body {
 	align-items: center;
 	height: 12vh;   /*TODO: try to change height dynamicly*/
 	width: 100%;
-	font-size: 16px;
+	font-size: 14px;
 	background-color: #fff;
 }
 
@@ -219,8 +287,10 @@ body {
 	position: absolute;
 	top: 9vh;
 	left: 5px;
-	min-width: 350px;
-	background-color: #f4f4f4;
+	white-space: nowrap;
+	background-color: var(--background-color);
+	border-radius: 10px;
+	overflow: hidden;
 	box-shadow: 0px 0px 20px 0.1px rgb(164, 162, 162);;
 	z-index: 100;
 }
@@ -238,18 +308,19 @@ body {
 
 .menu-item:hover, .menu-item a:hover{
 	background-color: #00305c;
-	color: #f4f4f4;
+	color: var(--background-color);
 }
 
 .menu-item a {
+	width: 100%;
 	color: var(--main-color);
 	text-align: start;
-	padding: 20px;
+	padding: 20px 50px 20px 20px;
 }
 
 
 .menu-item span:hover {
-	color: #f4f4f4;
+	color: var(--background-color);
 }
 
 .btn-contact {
@@ -280,6 +351,10 @@ body {
 @media (min-width: 768px) {
 	.navbar {
 		display: none;
+	}
+
+	.nav-link-burger {
+		padding: 0 50% 0 5%;
 	}
 }
 
