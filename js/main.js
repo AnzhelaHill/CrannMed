@@ -2,7 +2,12 @@ const allNavItems = document.querySelectorAll(".nav-item")
 const burgerBtn = document.querySelector(".burger-btn")
 const navbarBtnsBurger = document.querySelector(".navbar-btns-burger")
 const navXmark = document.querySelector(".nav-xmark")
-const AllNavBurgerItems = document.querySelectorAll(".nav-item-burger")
+const allNavBurgerItems = document.querySelectorAll(".nav-item-burger")
+const allCtaItems = document.querySelectorAll(".cta-item")
+const allPhotoItems = document.querySelectorAll(".photo-item")
+const arrowUpGalery = document.querySelector(".arrow-up")
+const arrowDownGalery = document.querySelector(".arrow-down")
+const progressLine = document.querySelector(":root")
 
  const OpenMainNav = (e) => {
 	allNavItems.forEach(item => {
@@ -26,7 +31,7 @@ const CloseBurgerNav = () => {
 }
 
 const OpenBurgerNavLinks = (e) => {
-	AllNavBurgerItems.forEach(item => {
+	allNavBurgerItems.forEach(item => {
 		const navLink = item.querySelector('.nav-link-burger')	
 		const navLinkImg = item.querySelector('.nav-link-burger img')
 		const dropdownContent = item.querySelector('.dropdown-menu-burger')
@@ -40,7 +45,47 @@ const OpenBurgerNavLinks = (e) => {
 	})
 }
 
+const PushDownBtnCtaItem = () => {
+	for (let i = 0; i < allCtaItems.length; i++) {
+		if (!allCtaItems[i].className.includes('inactive')) {
+			allCtaItems[i].classList.add('inactive')
+			allPhotoItems[i].classList.add('inactive')
+			if (i == allCtaItems.length-1) {
+				allCtaItems[0].classList.remove('inactive')
+				allPhotoItems[0].classList.remove('inactive')
+			} else {
+				allCtaItems[i+1].classList.remove('inactive')
+				allPhotoItems[i+1].classList.remove('inactive')
+			}
+			break
+		}
+	}
+}
+
+const PushUpBtnCtaItem = () => {
+	for (let i = 0; i < allCtaItems.length; i++) {
+		if (!allCtaItems[i].className.includes('inactive')) {
+			allCtaItems[i].classList.add('inactive')
+			allPhotoItems[i].classList.add('inactive')
+			if (i == 0) {
+				allCtaItems[allCtaItems.length-1].classList.remove('inactive')
+				allPhotoItems[allCtaItems.length-1].classList.remove('inactive')
+			} else {
+				allCtaItems[i-1].classList.remove('inactive')
+				allPhotoItems[i-1].classList.remove('inactive')
+			}
+			break
+		}
+	}
+}
+
+const prog = () => {
+	console.log('click')
+}
+
 document.addEventListener('click', OpenMainNav)
 burgerBtn.addEventListener('click', OpenBurgerNav)
 navXmark.addEventListener('click', CloseBurgerNav)
 document.addEventListener('click', OpenBurgerNavLinks)
+arrowDownGalery.addEventListener('click',PushDownBtnCtaItem)
+arrowUpGalery.addEventListener('click',PushUpBtnCtaItem)
