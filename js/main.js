@@ -48,27 +48,20 @@ const PushDownBtnCtaItem = () => {
 		let x = sizeOfOneElement * (i+1)
 		if (!allPhotoItems[i].className.includes('inactive')) {
 			allPhotoItems[i].classList.remove('active-photo')
-			allPhotoItems[i].classList.add('inactive')
-			allPhotoItems[i].style.maxHeight = '0px'
-			allPhotoItems[i].style.opacity = '0'
 			allCtaItems[i].classList.remove('active-content')
-			allCtaItems[i].style.opacity = '0'
-			allCtaItems[i].style.maxHeight = '0px'
+			allPhotoItems[i].classList.add('inactive')
+			setStyleGallery(allPhotoItems[i].style, '0px', '0')
+			setStyleGallery(allCtaItems[i].style, "0px", '0')
 			if (i == allCtaItems.length-1) {
 				allPhotoItems[0].classList.remove('inactive')
-				allPhotoItems[0].style.maxHeight = '100%'
-				allPhotoItems[0].style.opacity = '1'
+				setStyleGallery(allPhotoItems[0].style, '100%', '1')
 				root.style.setProperty('--progress-top', '0%')
-				allCtaItems[0].style.maxHeight = '40vh'
-				allCtaItems[0].style.opacity = '1'
-
+				setStyleGallery(allCtaItems[0].style, "100%", '1')
 			} else {
 				allPhotoItems[i+1].classList.remove('inactive')
-				allPhotoItems[i+1].style.maxHeight = '100%'
-				allPhotoItems[i+1].style.opacity = '1'
+				setStyleGallery(allPhotoItems[i+1].style, '100%', '1')
 				root.style.setProperty('--progress-top', x + '%')
-				allCtaItems[i+1].style.maxHeight = '40vh'
-				allCtaItems[i+1].style.opacity = '1'
+				setStyleGallery(allCtaItems[i+1].style, "100%", '1')
 			}
 			break
 		}
@@ -99,7 +92,6 @@ const PushUpBtnCtaItem = () => {
 		}
 	}
 }
-
 const setStyleGallery = (style, maxHeight, opacity) => {
 	style.maxHeight = maxHeight
 	style.opacity = opacity
