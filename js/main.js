@@ -7,6 +7,7 @@ const allCtaItems = document.querySelectorAll(".cta-item")
 const allPhotoItems = document.querySelectorAll(".photo-item")
 const arrowUpGalery = document.querySelector(".arrow-up")
 const arrowDownGalery = document.querySelector(".arrow-down")
+const counts = document.querySelectorAll(".count")
 
  const OpenMainNav = (e) => {
 	allNavItems.forEach(item => {
@@ -97,6 +98,52 @@ const setStyleGallery = (style, maxHeight, opacity) => {
 	style.opacity = opacity
 }
 
+const couterSection = () => {
+	function counter () {
+		counts.forEach(e => {
+			const data = parseInt(e.dataset.total)
+			let content = parseInt(e.textContent)
+			const intervalId = setInterval(() => {
+				content++;
+				content = Math.min(content, data)
+				updateValueView(content)
+				if (content >= data) {
+				clearInterval(intervalId)
+				}
+			}, 40)		
+			function updateValueView(value) {
+			  e.textContent = value;
+			}
+		})
+	}
+	function itemVisible(element) {
+		const rect = element.getBoundingClientRect();
+		return (
+		  rect.top >= 0 &&
+		  rect.left >= 0 &&
+		  rect.bottom <= window.innerHeight &&
+		  rect.right <= window.innerWidth
+		);
+	  }
+	  function executeCodeAfterElementVisibility(element, co) {
+		if (itemVisible(element)) {
+			counter();
+		} 
+		else {
+		  window.addEventListener('scroll', () => {
+			if (itemVisible(element)) {
+				counter();
+			}
+		  });
+		}
+	  } 
+	  const element = document.querySelector('.counter-item')
+	  executeCodeAfterElementVisibility(element, () => {
+		console.log(element)
+	  });
+}
+
+
 
 
 document.addEventListener('click', OpenMainNav)
@@ -105,3 +152,4 @@ navXmark.addEventListener('click', CloseBurgerNav)
 document.addEventListener('click', OpenBurgerNavLinks)
 arrowDownGalery.addEventListener('click',PushDownBtnCtaItem)
 arrowUpGalery.addEventListener('click',PushUpBtnCtaItem)
+document.addEventListener("DOMContentLoaded", ()=>{couterSection()})
