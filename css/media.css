@@ -40,12 +40,19 @@
 	}
 	/* Side sakura */
 	.main-title {
-		text-align: center;
+		text-align: left;
 		font-size: 30px;
-		padding: 50px 0;
+		padding: 50px 0  50px 50px;
 	}
-	.text-items{
+	.main-title h1 {
+		max-width: 550px;
+		margin: 0 auto;
+	}
+	.text-items {
 		width: 550px;
+	}
+	.text-item-two {
+		max-width: 100%;
 	}
 }
 @media (min-width: 768px) {
@@ -139,15 +146,19 @@
 		font-size: 50px;
 	}
 	.main-text {
-		min-width: 170%;
+		min-width: 180%;
 	}
 	.text-items {
 		flex-wrap: nowrap;
-		min-width: 700px;
-		padding-left: 150px;
+		min-width: 650px;
+		padding-left: 170px;
 	}
 	.text-item {
-		max-width: 200px;
+		max-width: 100%;
+
+	}
+	.text-item-two {
+		padding: 30px 0;
 	}
 	.main-img {
 		position: absolute;
@@ -159,7 +170,7 @@
 		z-index: 1;
 	}
 	.main-img img {
-		height: 400px;
+		height: 300px;
 		width: auto;
 	}
 }
@@ -287,6 +298,9 @@
 		width: 300px;
 		max-width: 400px;
 		padding: 35px 12px;
+	}
+	.text-item-two {
+		min-width: 750px;
 	}
 	.main-img {
 		top: 12vh;
