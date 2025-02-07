@@ -12,37 +12,49 @@
 	padding: 0;
 }
 .main {
-    min-height: 100%;
     max-width: 100vw;
     background-color: #fff;
 }
 .container-sakura {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     max-height: 100%;
-    position: relative;
-    margin: 0 auto;
+    max-width: 100vw;
+    padding-top: 14vh;
 }
 .main-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 14vh;
+    width: 100%;
+    color: #fff;
 }
 .main-title {
-    text-align: start;
-    color: #fff;
+    position: relative;
     background-color: var(--secondary-color);
-    font-size: 20px;
-    min-width: 100%;
-    padding: 50px 0px 50px 20px;
+    padding: 0 5px;
+}
+.main-title::before {
+    background-color: var(--secondary-color);
+}
+.main-title h1 {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 5px;
+    font-size: 2rem;
 }
 .main-text {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 100%;
     color: #fff;
+    background-color: var(--main-color);
+    padding: 0 5px;
+}
+.main-text::before {
     background-color: var(--main-color);
 }
 .text-items {
@@ -56,11 +68,16 @@
     max-width: 140px;
     padding: 25px 12px;
 }
-.text-item p {
-    padding: 5px;
+.text-item-two {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 5px;
+}
+.text-item-two h2 {
+    padding: 10px 0;
 }
 .main-img {
-    max-width: 100vw;
+    width: 100%;
     height: 100%;
     overflow: hidden;
 }
@@ -69,15 +86,11 @@
     height: auto;
     object-fit: cover;
 }
-.text-item-two {
-    text-align: left;
-    max-width: 100%;
-    padding-left: 20px;
-}
+
 .container-fluid-two {
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 100%;
     background-color: var(--background-color);
-}
+} 
