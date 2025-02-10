@@ -1,24 +1,20 @@
 @media (min-width: 576px) {
+	/* Max width */
+	.header, .nav, .wrapper-inside, .side-left, .side-right, .cta-items, .photo-items, .container-fluid, .counter-container, .container-footer, .subfooter-content, .main-title h1, .text-items, .text-item-two, .charts-container, .container-video{
+		max-width: 550px;
+	}
+	/* Main navigation */
 	.menu-item-burger a {
 		padding-left: 40px;
-	}
-	.header, .nav, .wrapper-inside, .side-left, .side-right, .cta-items, .photo-items{
-		max-width: 550px;
 	}
 	.nav-logo {
 		margin: 0;
 	}
 	/* Section contents*/
-	.container-fluid {
-		max-width: 550px;
-	}
 	.contents-of-content a {
 		padding: 1rem 2rem;
 	}
 	/* Section counter */
-	.counter-container {
-		width: 550px;
-	}
 	.counter-items {
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -32,29 +28,18 @@
 		font-size: 70px;
 	}
 	/* Footer */
-	.container-footer {
-		max-width: 550px;
-	}
 	.footer-menu {
 		grid-template-columns: repeat(3, 1fr);
 	}
-	.subfooter-content {
-		max-width: 550px;
-	}
 	/* Side sakura */
 	.main-title h1 {
-		max-width: 550px;
 		padding: 30px 0;
 	}
-	.text-items {
-		width: 550px;
-	}
-	.text-item-two {
-		max-width: 550px;
-	}
+	/*Extras*/
 }
 @media (min-width: 768px) {
-	.nav {
+	/* Max width */
+	.header,.nav, .wrapper-inside, .side-left, .cta-items, .side-right, .photo-items, .photo-item, .charts-container, .container-video{
 		max-width: 700px;
 	}
 	.nav-link-burger {
@@ -62,9 +47,6 @@
 	}
 	.homepage-slider, .wrapper-outer, .wrapper-inside {
 		height: 1100px;
-	}
-	.header, .wrapper-inside, .side-left, .cta-items, .side-right, .photo-items, .photo-item{
-		max-width: 700px;
 	}
 	.side-left {
 		height: 450px;
@@ -138,15 +120,15 @@
 	}
 	.main-title {
 		max-width: 60%;
-		padding-left: 5vw;
+		padding:0 10px 0 5vw;
 	}
 	.main-title h1 {
 		font-size: 50px;
 		margin: 0;
 	}
 	.main-text {
-		min-width: 80%;
-		width: 80%;
+		min-width: 70%;
+		width: 70%;
 		justify-content: start;
 	}
 	.text-items {
@@ -173,13 +155,45 @@
 		height: 100%;
 		width: auto;
 	}
+	.physicians-text-item {
+		min-width: 60%;
+		width: 70%;
+	}
+	.physicians-img {
+		position: absolute;
+		top: 12vh;
+		left: 50vw;
+		max-width: 45vw;
+		max-height: 500px;
+		z-index: 1;
+	}
+	.physicians-img img {
+		width: 100%;
+		max-height: 500px;
+	}
+	/* Extras*/
+	.charts {
+		justify-content: space-around;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.chart, .chart img {
+		width: 300px;
+	}
+	.circle {
+		width: 80px;
+		height: 80px;
+	}
+	.content-side h2{
+		font-size: 2rem;
+	}
 }
 @media (min-width: 992px) {
 	.header {
 		font-size: 14px;
 	}
 	.nav {
-		max-width: 992px;
+		max-width: 920px;
 	}
 	.burger-btn {
 		display: none;
@@ -299,6 +313,25 @@
 	.main-img {
 		height: 420px;
 	}
+	/* Extras */
+	.charts-container, .container-video {
+		max-width: 920px;
+	}
+	.main-title-extras h1{
+		padding: 70px 0;
+	}
+	.container-video {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.video-side {
+		height: 100%;
+		max-width: 50%;
+		margin: 0;
+	}
+	.content-side {
+		max-width: 45%;
+	}
 }
 @media (min-width: 1200px) {
 	.header {
@@ -394,7 +427,7 @@
 	.main-title, .text-item-two {
 		padding-left: 0;
 	}
-	.main-title::before, .main-text::before {
+	.main-title::before, .main-text::before, .physicians-text-item::before {
 		position: absolute;
 		content: "";
 		top: 0;
@@ -406,5 +439,23 @@
 	.main-text {
 		min-width: 60%;
 		width: 65%;
+	}
+	.physicians-text-item {
+		min-width: 60%;
+		width: 60%;
+	}
+	.text-item-two {
+		padding: 50px 30px 50px 0px;
+	}
+	.physicians-img {
+		max-width: 40vw;
+		max-height: 547px;
+	}
+	.physicians-img img {
+		max-height: 547px;
+	}
+	/* Extras */
+	.charts-container {
+		max-width: 1150px;
 	}
 }

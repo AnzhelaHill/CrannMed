@@ -1,0 +1,98 @@
+:root {
+	--main-color: #00305c;
+	--secondary-color: #19a7a7;
+	--thirdth-color: #0b6f6f;
+	--background-color: #f4f4f4;
+	--slider-count: 3;
+	--progress-top: 0%;
+}
+/* Extras for charts-container in for-physicians page*/
+.charts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+}
+.charts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+}
+.chart, .chart img {
+    width: 100%;
+}
+.has-small-font-size {
+    width: 100%;
+    font-size: 13px;
+    padding-left: 10px;
+    color: var(--main-color);
+}
+.refences {
+    max-width: 90%;
+    font-size: 10px;
+    padding: 20px 0px;
+    color: var(--main-color);
+}
+.refences li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--main-color);
+}
+/* Extras for charts-container in clinical-results page*/
+.main-title-extras h1{
+    padding: 70px 0;
+}
+.video-block {
+    max-width: 100%;
+    background-color: #fff;
+}
+.container-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.video-side {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.video-side video {
+    width: 100%;
+}
+.video-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://crannmed.com/wp-content/uploads/2024/12/Cover-video.png);
+    background-size: cover;
+}
+.circle {
+    width: 50px;
+    height: 50px;
+}
+.circle img {
+    width: 100%;
+}
+.content-side h2{
+    color: var(--main-color);
+}
+.content-side p {
+    color: var(--main-color);
+    padding-top: 10px;
+}
