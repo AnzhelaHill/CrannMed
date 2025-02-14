@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	const PlayVideo = () => {
 		videoOverlay.style.display = "none"
 		video.play()
+		video.setAttribute('controls', 'controls');
 	}
 
 	document.addEventListener('click', OpenMainNav)

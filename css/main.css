@@ -487,39 +487,40 @@ body {
 	flex-direction: column;
 	width: 100%;
 	background-color: #fff;
+	padding: 0 10px;
 }
-.container-fluid {
+.container-fluid, .container-fluid-result {
 	padding: 20px 0;
 	max-width: 400px;
 }
-.image-content {
+.image-content, .image-content-result {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	max-width: 90%;
+	max-width: 100%;
 	overflow: hidden;
 	margin: 0px auto;
+	margin-bottom: 15px;
 }
-.image-content img {
+.image-content img, .image-content-result img {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
 }
-.text-content {
+.text-content, .text-content-result {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: var(--main-color);
-	padding: 0 30px;
 }
-.text-content h2 {
+.text-content h2, .text-content-result h2 {
 	font-size: 26px;
 }
-.contents-of-content p {
+.contents-of-content p, .contents-of-content-result p {
 	padding: 20px 0;
 }
-.contents-of-content a{
+.contents-of-content a, .contents-of-content-result a{
 	position: relative;
 	display: inline-block;
 	text-decoration: none;
@@ -531,10 +532,10 @@ body {
 	z-index: 1;
 	transition: color .3s;
 }
-.contents-of-content a:hover {
+.contents-of-content a:hover, .contents-of-content-result a:hover {
 	color: #fff;
 }
-.contents-of-content a::before {
+.contents-of-content a::before, .contents-of-content-result a::before {
 	content: " ";
 	position: absolute;
 	left: 0;
@@ -546,7 +547,7 @@ body {
 	z-index: -1;
 	transition: height .3s, width .3s;
 }
-.contents-of-content a:hover::before {
+.contents-of-content a:hover::before, .contents-of-content-result a:hover::before {
 	height: 100%;
 	width: 100%;
 }
