@@ -45,7 +45,7 @@
 }
 @media (min-width: 768px) {
 	/* Max width */
-	.header,.nav, .wrapper-inside, .side-left, .cta-items, .side-right, .photo-items, .photo-item, .charts-container, .container-video, .page-holder{
+	.header,.nav, .wrapper-inside, .side-left, .cta-items, .side-right, .photo-items, .photo-item, .charts-container, .container-video{
 		max-width: 700px;
 	}
 	.nav-link-burger {
@@ -213,6 +213,28 @@
 	}
 	.acf-innerblocks-container h2 {
 		font-size: 28px;
+	}
+	.page-holder {
+		max-width: 720px;
+		width: 720px;
+		padding: 0px;
+	}
+	.flexible {
+		flex-direction: row;
+		justify-content: start;
+		padding: 20px 0px;
+	}
+	.inner-container {
+		max-width: 50%;
+	}
+	.inner-container h2 {
+		font-size: 2rem;
+	}
+	.inner-container, .info {
+		padding: 20px;
+	}
+	.email {
+		padding-bottom: 30px;
 	}
 }
 @media (min-width: 992px) {
@@ -390,19 +412,31 @@
 	.acf-innerblocks-container h2 {
 		font-size: 48px;
 	}
+	.page-holder {
+		max-width: 920px;
+		width: 920px;
+	}
+	.content {
+		flex-direction: row;
+		padding: 0;
+	}
+	.flexible {
+		justify-content: center;
+		padding: 0;
+	}
 }
 @media (min-width: 1200px) {
 	.header {
 		font-size: 16px;
 	}
 	.nav {
-		max-width: 1150px;
+		max-width: 1120px;
 	}
 	.homepage-slider, .wrapper-outer, .background-shape, .container, .wrapper-inside{
 		max-height: 60vh;
 	}
 	.wrapper-inside {
-		max-width: 1150px;
+		max-width: 1120px;
 	}
 	.side-left {
 		height: 100%;
@@ -446,18 +480,18 @@
 	}
 	/* Section contents*/
 	.container-fluid, .container-fluid-result {
-		max-width: 1150px;
+		max-width: 1120px;
 		justify-content: space-between;
 	}
 	.container-fluid-faq {
-		width: 1150px;
+		width: 1120px;
 	}
 	.text-content {
 		padding-right: 40px;
 	}
 	/* Section counter */
 	.counter-container {
-		width: 1150px;
+		width: 1120px;
 		max-height: 400px;
 	}
 	.counter-item {
@@ -466,7 +500,7 @@
 	}
 	/* Footer */
 	.container-footer {
-		min-width: 1150px;
+		min-width: 1120px;
 		margin-bottom: 10px;
 	}
 	.footer-logo {
@@ -476,7 +510,7 @@
 		padding-left: 30px;
 	}
 	.subfooter-content {
-		min-width: 1150px;
+		min-width: 1120px;
 		padding-left: 35px;
 	}
 	/* Side sakura*/
@@ -484,7 +518,7 @@
 		padding-bottom: 60px;
 	}
 	.main-info {
-		max-width: 1150px;
+		max-width: 1120px;
 	}
 	.main-title h1 {
 		max-width: 100%;
@@ -521,6 +555,13 @@
 	}
 	/* Extras */
 	.charts-container, .container-video {
-		max-width: 1150px;
+		max-width: 1120px;
+	}
+	.page-holder {
+		max-width: 1120px;
+		width: 1120px;
+	}
+	.inner-container h2 {
+		font-size: 3rem;
 	}
 }
