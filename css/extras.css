@@ -1,6 +1,6 @@
 :root {
 	--main-color: #00305c;
-	--secondary-color: #19a7a7;
+	--secondary-color: #20c7c7;
 	--thirdth-color: #0b6f6f;
 	--background-color: #f4f4f4;
 	--slider-count: 3;
@@ -140,7 +140,7 @@
     color: var(--main-color);
     border: 1px solid var(--main-color);
     cursor: pointer;
-    transition: .6s;
+    transition: .3s;
 }
 .faq-question i {
     font-size: 24px;
@@ -234,4 +234,103 @@
 }
 .img-wrapper img {
     max-width: 100%;
+}
+/* Extras for container-fluid in the-procedure page*/
+.image-content-procedure {
+    padding: 20px 0;
+}
+.procedure-block, .container-procedure-expect, .container-expect-left, .buttons-expect, .container-expect-right, .custom-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6f0f0;
+}
+.container-procedure-expect {
+    max-width: 400px;
+    padding: 40px 0;
+}
+.container-expect-left{
+    align-items: start;
+}
+.left-title {
+    position: relative;
+    width: 90%;
+    text-align: start;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 30px 10px 30px 0px;
+}
+.left-title h2 {
+    font-size: 48px;
+}
+.container-expect-left h2::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -600px;
+    width: 600px;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+.expect-text {
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 30px 0;
+}
+.expect-text p{
+    padding: 10px 0;
+}
+.buttons-expect{
+    width: 100%;
+}
+.buttons-expect button {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 20px 0;
+    margin-bottom: 20px;
+    transition: background-color .3s;
+}
+.buttons-expect .active {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+.tab-content.active{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 30px;
+}
+.tab-content {
+    display: none;
+}
+
+.tab-content .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 15px 0px;
+}
+.custom-list {
+    align-items: start;
+}
+.list-item {
+    position: relative;
+    color: var(--main-color);
+    font-size: 18px;
+    padding: 10px 0px 10px 30px;
+}
+.list-item::before {
+    position: absolute;
+    content: " ";
+    left: 0px;
+    top: 45%;
+    height: 8px;
+    width: 8px;
+    background-color: var(--main-color);
+    border-radius: 50%;
 }

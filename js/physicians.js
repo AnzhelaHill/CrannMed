@@ -1,7 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(){
+	const videoOverlay = document.querySelector(".video-overlay")
     const faqItems = document.querySelector(".faq-items")
     const faqItemAll = document.querySelectorAll(".faq-item")
 
+    const PlayVideo = () => {
+		videoOverlay.style.display = "none"
+		video.play()
+		video.setAttribute('controls', 'controls');
+	}
+    
     const OpenAnswer = (e) => {
         faqItemAll.forEach(item => {
             const faqAnswer = item.querySelector('.faq-answer')
@@ -53,5 +60,6 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     )}
     
+	videoOverlay.addEventListener('click', PlayVideo)
     document.addEventListener('click', OpenAnswer)
 })

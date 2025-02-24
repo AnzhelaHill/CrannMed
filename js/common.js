@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function(){
 	const navXmark = document.querySelector(".nav-xmark")
 	const allNavBurgerItems = document.querySelectorAll(".nav-item-burger")
 	const footerYear = document.querySelector(".footer__year")
-	const videoOverlay = document.querySelector(".video-overlay")
 	const video = document.querySelector("#video")
 
 	const OpenMainNav = (e) => {
@@ -51,17 +50,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	}
 	handleCurrentYear()
 
-	const PlayVideo = () => {
-		videoOverlay.style.display = "none"
-		video.play()
-		video.setAttribute('controls', 'controls');
-	}
-
 	document.addEventListener('click', OpenMainNav)
 	burgerBtn.addEventListener('click', OpenBurgerNav)
 	navXmark.addEventListener('click', CloseBurgerNav)
 	document.addEventListener('click', OpenBurgerNavLinks)
-	videoOverlay.addEventListener('click', PlayVideo)
 })
 
 
