@@ -144,7 +144,7 @@
 		z-index: 10;
 	}
 	.main-title {
-		max-width: 60%;
+		max-width: 50%;
 		padding:0 10px 0 5vw;
 	}
 	.main-title h1 {
@@ -171,14 +171,14 @@
 	.main-img {
 		position: absolute;
 		top: 14vh;
-		left: 50vw;
-		height: 320px;
+		left: 49vw;
+		height: auto;
 		max-width: 40vw;
 		z-index: 1;
 	}
 	.main-img img {
-		height: 100%;
-		width: auto;
+		height: auto;
+		width: 40vw;
 	}
 	.physicians-text-item {
 		min-width: 60%;
@@ -187,7 +187,7 @@
 	.physicians-img {
 		position: absolute;
 		top: 12vh;
-		left: 50vw;
+		left: 49vw;
 		max-width: 45vw;
 		max-height: 500px;
 		z-index: 1;
@@ -369,7 +369,7 @@
 	}
 	/* Side sakura */
 	.main-title {
-		max-width: 55%;
+		width: 55vw;
 	}
 	.main-title h1 {
 		font-size: 60px;
@@ -439,19 +439,34 @@
 	.text-content-procedure .contents-of-content h2 {
 		min-width: 50%;
 	}
+	.container-procedure-expect {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: start;
+		max-width: 920px;
+	}
+	.container-expect-left {
+		width: 45%;
+	}
+	.left-title {
+		width: 100%;
+	}
+	.container-expect-right {
+		width: 45%;
+	}
 }
 @media (min-width: 1200px) {
 	.header {
 		font-size: 16px;
 	}
 	.nav {
-		max-width: 1120px;
+		max-width: 1180px;
 	}
 	.homepage-slider, .wrapper-outer, .background-shape, .container, .wrapper-inside{
 		max-height: 60vh;
 	}
 	.wrapper-inside {
-		max-width: 1120px;
+		max-width: 1180px;
 	}
 	.side-left {
 		height: 100%;
@@ -495,18 +510,21 @@
 	}
 	/* Section contents*/
 	.container-fluid, .container-fluid-result {
-		max-width: 1120px;
+		max-width: 1180px;
 		justify-content: space-between;
 	}
 	.container-fluid-faq {
-		width: 1120px;
+		width: 1180px;
 	}
 	.text-content {
 		padding-right: 40px;
 	}
+	.contents-of-content p, .contents-of-content li {
+		font-size: 18px;
+	}
 	/* Section counter */
 	.counter-container {
-		width: 1120px;
+		width: 1180px;
 		max-height: 400px;
 	}
 	.counter-item {
@@ -515,7 +533,7 @@
 	}
 	/* Footer */
 	.container-footer {
-		min-width: 1120px;
+		min-width: 1180px;
 		margin-bottom: 10px;
 	}
 	.footer-logo {
@@ -525,7 +543,7 @@
 		padding-left: 30px;
 	}
 	.subfooter-content {
-		min-width: 1120px;
+		min-width: 1180px;
 		padding-left: 35px;
 	}
 	/* Side sakura*/
@@ -533,7 +551,7 @@
 		padding-bottom: 60px;
 	}
 	.main-info {
-		max-width: 1120px;
+		max-width: 1180px;
 	}
 	.main-title h1 {
 		max-width: 100%;
@@ -562,7 +580,7 @@
 		padding: 50px 30px 50px 0px;
 	}
 	.physicians-img {
-		max-width: 40vw;
+		max-width: 49vw;
 		max-height: 547px;
 	}
 	.physicians-img img {
@@ -570,16 +588,31 @@
 	}
 	/* Extras */
 	.charts-container, .container-video {
-		max-width: 1120px;
+		max-width: 1180px;
 	}
 	.page-holder {
-		max-width: 1120px;
-		width: 1120px;
+		max-width: 1180px;
+		width: 1180px;
 	}
 	.inner-container h2 {
 		font-size: 3rem;
 	}
 	.containere-fluid-procedure {
 		padding-bottom: 90px;
+	}
+	/* Side the-procedure */
+	.container-procedure-expect {
+		max-width: 1180px;
+	}
+}
+@media (min-width: 1400px) {
+	.nav, .wrapper-inside, .container-fluid, .container-fluid-result, .main-info, .charts-container, .container-video, .page-holder, .container-procedure-expect {
+		max-width: 1300px;
+	}
+	.container-footer, .subfooter-content {
+		min-width: 1300px;
+	}
+	.container-fluid-faq, .counter-container, .page-holder {
+		width: 1300px;
 	}
 }

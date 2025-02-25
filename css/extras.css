@@ -236,6 +236,23 @@
     max-width: 100%;
 }
 /* Extras for container-fluid in the-procedure page*/
+.wp-block-list {
+    padding-left: 20px;
+}
+.wp-block-list li {
+    position: relative;
+    list-style: none;
+    padding: 5px 0;
+}
+.wp-block-list li::before {
+    content: " ";
+    position: absolute;
+    top: 25%;
+    left: -30px;
+    width: 22px;
+    height: 22px;
+    background: url(https://crannmed.com/wp-content/themes/crannmed-new/blocks/text-image-block/icons/checked-icon.png);
+}
 .image-content-procedure {
     padding: 20px 0;
 }

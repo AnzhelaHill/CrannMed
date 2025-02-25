@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
+    const buttonsArea = document.querySelector('.buttons-expect')
     const buttons = document.querySelectorAll('.buttons-expect button')
     const contents = document.querySelectorAll('.tab-content')
     
@@ -14,5 +15,5 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 
-    document.addEventListener('click', ChangeInfo)
+    buttonsArea.addEventListener('click', ChangeInfo)
 })
