@@ -1,6 +1,6 @@
 @media (min-width: 576px) {
 	/* Max width */
-	.header, .nav, .wrapper-inside, .side-left, .side-right, .cta-items, .photo-items, .container-fluid, .container-fluid-result, .container-footer, .subfooter-content, .main-title h1, .text-items, .text-item-two, .charts-container, .container-video, .page-holder, .container-procedure-expect{
+	.header, .nav, .wrapper-inside, .side-left, .side-right, .cta-items, .photo-items, .container-fluid, .container-fluid-result, .container-footer, .subfooter-content, .main-title h1, .text-items, .text-item-two, .charts-container, .container-video, .page-holder, .container-procedure-expect, .swiper, .container-team{
 		max-width: 550px;
 	}
 	/* Main navigation */
@@ -45,7 +45,7 @@
 }
 @media (min-width: 768px) {
 	/* Max width */
-	.header,.nav, .wrapper-inside, .side-left, .cta-items, .side-right, .photo-items, .photo-item, .charts-container, .container-video, .container-procedure-expect{
+	.header,.nav, .wrapper-inside, .side-left, .cta-items, .side-right, .photo-items, .photo-item, .charts-container, .container-video, .container-procedure-expect, .swiper, .container-team{
 		max-width: 700px;
 	}
 	.nav-link-burger {
@@ -173,6 +173,7 @@
 		top: 14vh;
 		left: 49vw;
 		height: auto;
+		max-height: 40%;
 		max-width: 40vw;
 		z-index: 1;
 	}
@@ -243,6 +244,9 @@
 	.text-content-procedure, .image-content-procedure {
 		width: 100%;
 	}
+	.team-info h1 {
+		font-size: 40px;
+	}
 }
 @media (min-width: 992px) {
 	.header {
@@ -259,6 +263,9 @@
 	}
 	.nav {
 		min-width: 100%;
+	}
+	.navbar-btns {
+		padding: 0;
 	}
 	.homepage-slider {
 		max-height: 60vh;
@@ -454,6 +461,23 @@
 	.container-expect-right {
 		width: 45%;
 	}
+	.swiper {
+		max-width: 920px;
+	}
+	/* Extras for Our Team side */
+	.container-team {
+		background-image: url('https://crannmed.com/wp-content/themes/crannmed/static/images/logo-graphic-hero_CrannMed.png');
+		background-size: 22%;
+		background-position: center right;
+		background-repeat: no-repeat;
+		min-width: 920px;
+	}
+	.team-info {
+		max-width: 560px;
+	}
+	.team-info h1 {
+		font-size: 50px;
+	}
 }
 @media (min-width: 1200px) {
 	.header {
@@ -580,14 +604,14 @@
 		padding: 50px 30px 50px 0px;
 	}
 	.physicians-img {
-		max-width: 49vw;
-		max-height: 547px;
+		max-width: 40vw;
+		max-height: 530px;
 	}
 	.physicians-img img {
-		max-height: 547px;
+		max-height: 530px;
 	}
 	/* Extras */
-	.charts-container, .container-video {
+	.charts-container, .container-video, .container-procedure-expect, .swiper {
 		max-width: 1180px;
 	}
 	.page-holder {
@@ -600,13 +624,16 @@
 	.containere-fluid-procedure {
 		padding-bottom: 90px;
 	}
-	/* Side the-procedure */
-	.container-procedure-expect {
-		max-width: 1180px;
+	.container-team {
+		background-size: 20%;
+		min-width: 1180px;
+	}
+	.team-info {
+		max-width: 640px;
 	}
 }
 @media (min-width: 1400px) {
-	.nav, .wrapper-inside, .container-fluid, .container-fluid-result, .main-info, .charts-container, .container-video, .page-holder, .container-procedure-expect {
+	.nav, .wrapper-inside, .container-fluid, .container-fluid-result, .main-info, .charts-container, .container-video, .page-holder, .container-procedure-expect, .swiper {
 		max-width: 1300px;
 	}
 	.container-footer, .subfooter-content {
@@ -614,5 +641,8 @@
 	}
 	.container-fluid-faq, .counter-container, .page-holder {
 		width: 1300px;
+	}
+	.container-team {
+		min-width: 100%;
 	}
 }

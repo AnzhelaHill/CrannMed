@@ -351,3 +351,75 @@
     background-color: var(--main-color);
     border-radius: 50%;
 }
+/* Extras for About Us side corousel section */
+.client-corousel-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 100px 0px;
+}
+.swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    height: 100%;
+}
+.swiper-wrapper {
+    margin-bottom: 40px;
+}
+.swiper-slide img{
+    width: 100%;
+    height: auto;
+    margin-right: 40px;
+}
+.swiper-pagination-bullet {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    opacity: 1;
+    transform: scale(1) !important;
+}
+.swiper-pagination-bullet-active{
+    height: 15px;
+    width: 15px;
+    background-color: var(--main-color);
+    transform: scale(1) !important;
+}
+/* Extras for Our Team side */
+.our-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14vh;
+    max-width: 100vw;
+    background-color: rgba(17,167,167,0.1);
+}
+.container-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    max-height: 100%;
+}
+.team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    max-height: 100%;
+    color: var(--main-color);
+    padding: 40px 0px;
+}
+.team-info h1 {
+    font-size: 37px;
+    padding: 20px 0px;
+}
+.team-info p {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 20px;
+}

@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
 	const videoOverlay = document.querySelector(".video-overlay")
-    const faqItems = document.querySelector(".faq-items")
     const faqItemAll = document.querySelectorAll(".faq-item")
 
     const PlayVideo = () => {
