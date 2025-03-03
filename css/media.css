@@ -563,9 +563,6 @@
 	.footer-logo {
 		padding-left: 50px;
 	}
-	.footer-menu {
-		padding-left: 30px;
-	}
 	.subfooter-content {
 		min-width: 1180px;
 		padding-left: 35px;
@@ -611,7 +608,7 @@
 		max-height: 530px;
 	}
 	/* Extras */
-	.charts-container, .container-video, .container-procedure-expect, .swiper {
+	.charts-container, .container-video, .container-procedure-expect, .swiper, .team {
 		max-width: 1180px;
 	}
 	.page-holder {
