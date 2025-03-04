@@ -1,6 +1,6 @@
 @media (min-width: 576px) {
 	/* Max width */
-	.header, .nav, .wrapper-inside, .side-left, .side-right, .cta-items, .photo-items, .container-fluid, .container-fluid-result, .container-footer, .subfooter-content, .main-title h1, .text-items, .text-item-two, .charts-container, .container-video, .page-holder, .container-procedure-expect, .swiper, .container-team{
+	.header, .nav, .wrapper-inside, .side-left, .side-right, .cta-items, .photo-items, .container-fluid, .container-fluid-result, .container-footer, .subfooter-content, .main-title h1, .text-items, .text-item-two, .charts-container, .container-video, .page-holder, .container-procedure-expect, .swiper, .container-simple-header{
 		max-width: 550px;
 	}
 	/* Main navigation */
@@ -45,7 +45,7 @@
 }
 @media (min-width: 768px) {
 	/* Max width */
-	.header,.nav, .wrapper-inside, .side-left, .cta-items, .side-right, .photo-items, .photo-item, .charts-container, .container-video, .container-procedure-expect, .swiper, .container-team{
+	.header,.nav, .wrapper-inside, .side-left, .cta-items, .side-right, .photo-items, .photo-item, .charts-container, .container-video, .container-procedure-expect, .swiper, .container-simple-header{
 		max-width: 700px;
 	}
 	.nav-link-burger {
@@ -244,8 +244,17 @@
 	.text-content-procedure, .image-content-procedure {
 		width: 100%;
 	}
-	.team-info h1 {
+	.simple-header-info h1 {
 		font-size: 40px;
+	}
+	.contact-info {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.item-contact {
+		justify-content: center;
+		width: 50%;
+		padding: 30px 0;
 	}
 }
 @media (min-width: 992px) {
@@ -465,18 +474,27 @@
 		max-width: 920px;
 	}
 	/* Extras for Our Team side */
-	.container-team {
+	.container-simple-header {
 		background-image: url('https://crannmed.com/wp-content/themes/crannmed/static/images/logo-graphic-hero_CrannMed.png');
 		background-size: 22%;
 		background-position: center right;
 		background-repeat: no-repeat;
 		min-width: 920px;
 	}
-	.team-info {
+	.simple-header-info {
 		max-width: 560px;
 	}
-	.team-info h1 {
+	.simple-header-info h1 {
 		font-size: 50px;
+	}
+	/* Extars for Contact side */
+	.contact-info {
+		flex-direction: column;
+		padding: 0 50px;
+	}
+	.item-contact {
+		width: 100%;
+		justify-content: start;
 	}
 }
 @media (min-width: 1200px) {
@@ -621,11 +639,11 @@
 	.containere-fluid-procedure {
 		padding-bottom: 90px;
 	}
-	.container-team {
+	.container-simple-header {
 		background-size: 20%;
 		min-width: 1180px;
 	}
-	.team-info {
+	.simple-header-info {
 		max-width: 640px;
 	}
 }
@@ -639,7 +657,7 @@
 	.container-fluid-faq, .counter-container, .page-holder {
 		width: 1300px;
 	}
-	.container-team {
+	.container-simple-header {
 		min-width: 100%;
 	}
 }
