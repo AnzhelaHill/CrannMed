@@ -59,6 +59,7 @@
     column-gap: 4%;
     row-gap: 30px;
     max-width: 400px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 .video-side {
@@ -157,12 +158,14 @@
     padding: 20px;
 }
 /* Section  contact */
+.contact-block {
+    padding: 20px 10px;
+}
 .contact-block, .page-holder{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    padding: 20px 0px;
 }
 .page-holder{
     position: relative;
@@ -171,6 +174,7 @@
     padding: 20px 20px 0px 20px;
     color: var(--main-color);
     box-shadow: 0px 0px 9px 5px rgba(174, 174, 175, 0.2);
+    padding: 20px;
 }
 .page-holder::before {
     content: " ";
@@ -242,7 +246,7 @@
 }
 /* Extras for container-fluid in the-procedure page*/
 .wp-block-list {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .wp-block-list li {
     position: relative;
@@ -270,7 +274,7 @@
 }
 .container-procedure-expect {
     max-width: 400px;
-    padding: 40px 0;
+    padding: 40px 10px;
 }
 .container-expect-left{
     align-items: start;
@@ -417,7 +421,7 @@
     max-width: 400px;
     max-height: 100%;
     color: var(--main-color);
-    padding: 40px 0px;
+    padding: 40px 10px;
 }
 .simple-header-info h1 {
     font-size: 37px;
