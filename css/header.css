@@ -18,44 +18,67 @@
 .container-sakura {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     max-height: 100%;
-    max-width: 100vw;
+    max-width: 400px;
     padding-top: 14vh;
+    margin: 0 auto;    
 }
 .main-info {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
     color: #fff;
 }
 .main-title {
-    position: relative;
-    background-color: var(--secondary-color);
-    padding: 0 5px;
-}
-.main-title::before {
-    background-color: var(--secondary-color);
-}
-.main-title h1 {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 40px 5px;
-    font-size: 2rem;
-}
-.main-text, .physicians-text-item {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 100%;
+    background-color: var(--secondary-color);
+}
+.main-title h1 {
+    width: 100%;
+    padding: 40px 20px;
+    font-size: 2rem;
+}
+.main-text, .common-text-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     color: #fff;
     background-color: var(--main-color);
-    padding: 0 5px;
 }
-.main-text::before, .physicians-text-item::before {
+.main-text {
+    position: relative;
+}
+.main-title::before, .main-text::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: -590px;
+    height: 100%;
+    width: 600px;
+    z-index: -1;
+}
+.main-title::before {
+    background-color: var(--secondary-color);
+}
+.main-text::before {
     background-color: var(--main-color);
+}
+.common-text-item {
+    flex-direction: column;
+    padding: 15px 20px;
+}
+.common-text-item h2, .common-text-item p {
+    width: 100%;
+    padding: 15px 0;
 }
 .text-items {
     display: flex;
@@ -66,25 +89,14 @@
 .text-item {
     text-align: center;
     max-width: 140px;
-    padding: 25px 12px;
+    padding: 25px 20px;
 }
-.text-item-two {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 40px 5px;
-}
-.text-item-two h2 {
-    padding: 10px 0;
-}
-.text-item-two p {
-    padding-top: 10px;
-}
-.main-img, .physicians-img {
+.main-img {
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
 }
-.main-img img, .physicians-img img { 
+.main-img img{ 
     width: 100%;
     height: auto;
     object-fit: cover;
