@@ -22,7 +22,7 @@
     justify-content: center;
     max-height: 100%;
     max-width: 400px;
-    padding-top: 14vh;
+    padding-top: 12vh;
     margin: 0 auto;    
 }
 .main-info {
@@ -64,7 +64,6 @@
     left: -590px;
     height: 100%;
     width: 600px;
-    z-index: -1;
 }
 .main-title::before {
     background-color: var(--secondary-color);
@@ -85,6 +84,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    min-width: 100%;
 }
 .text-item {
     text-align: center;

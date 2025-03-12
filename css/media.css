@@ -11,10 +11,6 @@
 		margin: 0;
 	}
 	/* Section contents*/
-	.text-items {
-		width: 550px;
-		justify-content: space-between;
-	}
 	.contents-of-content a, .contents-of-content-result a {
 		padding: 1rem 2rem;
 	}
@@ -38,10 +34,10 @@
 	.footer-menu {
 		grid-template-columns: repeat(3, 1fr);
 	}
-	/* Sakura */
-	.main-title h1, .common-text-item {
-		padding-left: 0;
-	} 
+	/* Sakura header */
+	.text-items {
+		flex-wrap: nowrap;
+	}
 	/*Extras*/
 	.content-side h2 {
 		font-size: 28px;
@@ -125,7 +121,6 @@
 	.subfooter-content {
 		justify-content: start;
 		min-width: 750px;
-		padding-left: 20px;
 	}
 	/* Side sakura */
 	.main {
@@ -136,7 +131,8 @@
 	}
 	.main-info {
 		justify-content: start;
-		max-width: 60%;
+		width: 100%;
+		max-width: 65%;
 		z-index: 10;
 	}
 	.main-title {
@@ -152,9 +148,11 @@
 		min-width: 120%;
 		margin-left: 20%;
 	}
-	.text-items {
-		flex-wrap: nowrap;
-		padding: 0 20px;
+	.common-text-item {
+		padding-left: 0;
+	}
+	.main-title::before, .main-text::before {
+		z-index: -1;
 	}
 	.main-img {
 		height: 100%;
@@ -211,6 +209,13 @@
 	}
 	.text-content-procedure, .image-content-procedure {
 		width: 100%;
+	}
+	.container-simple-header {
+		background-image: url('https://crannmed.com/wp-content/themes/crannmed/static/images/logo-graphic-hero_CrannMed.png');
+		background-size: 22%;
+		background-position: center right;
+		background-repeat: no-repeat;
+		min-width: 720px;
 	}
 	.simple-header-info h1 {
 		font-size: 40px;
@@ -347,7 +352,6 @@
 	}
 	.subfooter-content {
 		min-width: 920px;
-		padding-left: 10px;
 	}
 	/* Side sakura */
 	.container-sakura {
@@ -435,10 +439,6 @@
 	}
 	/* Extras for Our Team side */
 	.container-simple-header {
-		background-image: url('https://crannmed.com/wp-content/themes/crannmed/static/images/logo-graphic-hero_CrannMed.png');
-		background-size: 22%;
-		background-position: center right;
-		background-repeat: no-repeat;
 		min-width: 920px;
 	}
 	.simple-header-info {
@@ -540,7 +540,6 @@
 	}
 	.subfooter-content {
 		min-width: 1180px;
-		padding-left: 35px;
 	}
 	/* Side sakura*/
 	.container-sakura {
@@ -583,5 +582,8 @@
 	}
 	.container-simple-header {
 		min-width: 100%;
+	}
+	.main-img, .main-img img {
+		max-height: 370px;
 	}
 }
