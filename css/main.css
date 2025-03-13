@@ -90,7 +90,7 @@ body {
 .nav-xmark i {
 	padding: 20px;
 	font-size: 45px;
-	margin-right: 25px;
+	margin-right: 1vw;
 }
 .nav-xmark i:hover {
 	color: #c2c2c2;
@@ -526,9 +526,6 @@ body {
 	z-index: 1;
 	transition: color .3s;
 }
-.contents-of-content a:hover, .contents-of-content-result a:hover {
-	color: #fff;
-}
 .contents-of-content a::before, .contents-of-content-result a::before {
 	content: " ";
 	position: absolute;
@@ -540,10 +537,6 @@ body {
 	background-color: var(--secondary-color);
 	z-index: -1;
 	transition: height .3s, width .3s;
-}
-.contents-of-content a:hover::before, .contents-of-content-result a:hover::before {
-	height: 100%;
-	width: 100%;
 }
 .btn-title {
 	display: block;

@@ -518,6 +518,13 @@
 	.text-content {
 		padding-right: 40px;
 	}
+	.contents-of-content a:hover, .contents-of-content-result a:hover {
+		color: #fff;
+	}
+	.contents-of-content a:hover::before, .contents-of-content-result a:hover::before {
+		height: 100%;
+		width: 100%;
+	}
 	.contents-of-content p, .contents-of-content li {
 		font-size: 18px;
 	}
