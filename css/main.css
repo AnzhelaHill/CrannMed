@@ -320,9 +320,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url('https://crannmed.com/wp-content/themes/crannmed-new/blocks/homepage-slider/images/background.png');
-	background-position: right, bottom;
-	background-repeat: no-repeat;
 }
 .wrapper-inside {
 	display: flex;
