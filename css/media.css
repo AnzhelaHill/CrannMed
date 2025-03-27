@@ -266,11 +266,11 @@
 	}
 	.side-left {
 		height: 50vh;
-		width: 470px;
+		width: 100%;
 		padding: 0;
 	}
 	.cta-items {
-		width: 450px;
+		width: 100%;
 		min-height: 50vh;
 	}
 	.cta-item {
@@ -472,13 +472,13 @@
 	}
 	.wrapper-inside {
 		max-width: 1180px;
+		width: 1180px;
 	}
-	.side-left, .side-right {
+	.side-right {
 		width: 550px;
 	}
 	.cta-items {
 		height: 100%;
-		width: 550px;
 	}
 	.cta-item {
 		width: 100%;
@@ -584,7 +584,7 @@
 	.container-footer, .subfooter-content {
 		min-width: 1300px;
 	}
-	.container-fluid-faq, .counter-container, .page-holder {
+	.wrapper-inside, .container-fluid-faq, .counter-container, .page-holder {
 		width: 1300px;
 	}
 	.container-simple-header {
