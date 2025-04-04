@@ -26,8 +26,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	right: 10px;
-	/* height: 10vh; */
-	/* width: 10vh; */
 	padding: 20px 15px;
 	background-color: var(--thirdth-color);
 	border: 1px solid transparent;
